@@ -1,21 +1,21 @@
 <img width="613" height="300" alt="Screenshot 2026-11-13 at 5 07 53 PM" src="https://github.com/user-attachments/assets/5a07cbaf-4a6f-4f34-b6ec-09d99496f67b" />
 
 
-##Wireshark Lab: Finding a Plaintext Password in HTTP Traffic
+# Wireshark Lab: Finding a Plaintext Password in HTTP Traffic
 
 #Goal: capture a login sent over HTTP and find the password in the packets, to show why unencrypted logins are unsafe.
 
 Diagram comparing what Wireshark sees over HTTP and HTTPS
 
-##Overview
+### Overview
 
 When a website uses plain HTTP, everything the browser sends travels across the network as readable text, including usernames and passwords. Anyone who can capture that traffic can read it.
 
 This lab proves that with a packet capture. I run a small practice login page on my own computer, sign in with fake credentials, and use Wireshark to pull the password straight out of the traffic.
 
-##The four steps of the lab
+### The four steps of the lab
 
-#1. Start the practice login page
+### 1. Start the practice login page
 bash
 git clone https://github.com/YOUR-USERNAME/wireshark-plaintext-password.git
 cd wireshark-plaintext-password
@@ -23,7 +23,7 @@ python3 login_server.py     # on Windows: python login_server.py
 
 The page is served at http://127.0.0.1:8080. It does not store or check anything.
 
-#2. Capture on the loopback interface
+### 2. Capture on the loopback interface
 
 Open Wireshark and double-click the loopback interface. Loopback carries traffic that stays inside your own computer.
 
@@ -31,11 +31,11 @@ System	Interface name
 Windows	Adapter for loopback traffic capture
 macOS	Loopback: lo0
 Linux	Loopback: lo
-3. Sign in with fake credentials
+### 3. Sign in with fake credentials
 
 Open http://127.0.0.1:8080 in a browser, type a made-up username and password, and press Sign in. Then stop the capture with the red square in Wireshark.
 
-#4. Filter for the POST and read it
+###4. Filter for the POST and read it
 
 Type this display filter and press Enter:
 
