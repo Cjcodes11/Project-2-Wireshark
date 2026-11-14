@@ -19,9 +19,10 @@ By grabbing the user's input and prompting them to scan their LAN, it let's the 
 Future updates to this program will include imported libraries and more data lists to display packet information. 
 
 ### Technologies used:
-Python
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-Author, 
+
+### Author, 
 Caleb Abreu
 
 ### Contact Me
