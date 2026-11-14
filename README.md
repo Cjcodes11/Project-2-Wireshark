@@ -24,6 +24,6 @@ Python
 Author, 
 Caleb Abreu
 
-*** Contact Me
+### Contact Me
 * 719-678-1305
 * Cjoshuaabreu@gmail.com
